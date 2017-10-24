@@ -1,0 +1,18 @@
+package com.day01;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Created by pk4 on 10/24/17.
+ */
+@RestController
+public class Hello {
+
+    @RequestMapping(value="/hello")
+    public String sayHello(@RequestParam(name="name") String name)
+    {
+        return "Hello " + name;
+    }
+}
